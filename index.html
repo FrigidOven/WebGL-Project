@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            WebGL Project
+        </title>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></meta>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+
+          <script type="text/javascript" src="setup/webgl_setup.js"></script>
+
+          <script type="text/javascript" src="input/keyboard.js"></script>
+          <script type="text/javascript" src="input/mouse.js"></script>
+
+          <script type="text/javascript" src="math/mat4.js"></script>
+          <script type="text/javascript" src="math/quaternion.js"></script>
+          <script type="text/javascript" src="math/transform.js"></script>
+
+          <script type="text/javascript" src="geometry/mesh.js"></script>
+          <script type="text/javascript" src="geometry/primitives.js"></script>
+          <script type="text/javascript" src="geometry/objLoader.js"></script>
+
+          <script type="text/javascript" src="resources/texture.js"></script>
+          <script type="text/javascript" src="resources/material.js"></script>
+
+          <script type="text/javascript" src="shaders/shader.js"></script>
+          <script type="text/javascript" src="shaders/default.js"></script>
+          <script type="text/javascript" src="shaders/unlitTextured.js"></script>
+          <script type="text/javascript" src="shaders/unlitUntextured.js"></script>
+          <script type="text/javascript" src="shaders/skybox.js"></script>
+          <script type="text/javascript" src="shaders/wireframe.js"></script>
+
+          <script type="text/javascript" src="scene/camera.js"></script>
+          <script type="text/javascript" src="scene/light.js"></script>
+          <script type="text/javascript" src="scene/scene.js"></script>
+          <script type="text/javascript" src="scene/entity.js"></script>
+
+          <script type="text/javascript" src="components/movementController.js"></script>
+          <script type="text/javascript" src="components/rotationController.js"></script>
+          <script type="text/javascript" src="components/keyboardRotationController.js"></script>
+          <script type="text/javascript" src="components/rotator.js"></script>
+          <script type="text/javascript" src="components/materialSwitcher.js"></script>
+
+    </head>
+    <body onLoad="
+        webGLStart();
+        Keyboard.init(); 
+        Mouse.init();
+        Texture.init();
+        Shader.init();
+    ">
+        <canvas id="graphics-canvas" style="border: none;" width="1280" height="720"></canvas>
+        <br/>
+    </body>
+</html>
